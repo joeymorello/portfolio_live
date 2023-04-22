@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joey Morello || Portfolio</title>
+
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/landing.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r137/renderers/CSS3DRenderer.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.139.0/examples/js/renderers/CSS3DRenderer.js"></script>
+
+
+	<style> 
+		canvas {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		.text-plane {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			background: red;
+			box-shadow: 0 0 50px 10px rgba(255, 0, 0, 0.5);
+			transform-style: preserve-3d;
+		}
+	</style>
+
+</head>
+<body>
+
+    <!--  hey :D  -->
+
+    <div class="main_container" id="3DPlane">
+            <div class="landing_container">
+                <h1 class="header_text">Joey Morello</h1>
+                <h3 class="header_text">Creative Technologist || Chicago</h3>
+
+                <div class="socials_container">
+                    <a target="_blank" href="https://instagram.com/j.o.e.y.y.o.e.j?igshid=YmMyMTA2M2Y=">Instagram</a>
+                    <a target="_blank" href="https://www.linkedin.com/in/joey-morello">Linkedin</a>
+                </div>
+            </div>
+
+            <div class="client_projects_container">
+                <h2 class="header_text">Client Projects</h2>
+                <ul>
+                    <li>
+                        <p>3D</p>
+                        <a href="/html/project_pages/oasis.html">Sara Shakeel - Oasis 2.0</a>
+                    </li>
+
+                    <li>
+                        <p>WEB</p>
+                        <a href="/html/project_pages/fanta.html">Fanta - #WhatTheFanta Web Game</a>
+                    </li>
+
+                    <li>
+                        <p>LASERS</p>
+                        <a href="/html/project_pages/doritos.html">Doritos - Triangle Tracker</a>
+                    </li>
+
+                    <li>
+                        <p>HOLOGRAM</p>
+                        <a href="/html/project_pages/hologram.html">Interactive Holographic Kiosks</a>
+                    </li>
+
+                    <li>
+                        <p>WEB</p>
+                        <a href="/html/project_pages/abb.html">ABB - Virtual Experience</a>
+                    </li>
+                </ul>
+            </div>
+    </div>
+
+    <script>
+        /*
+
+        a job for another day ~~~~~
+
+		// Initialize Three.js
+		const scene = new THREE.Scene();
+		const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+		camera.position.z = 5;
+		const renderer = new THREE.CSS3DRenderer();
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		document.body.appendChild(renderer.domElement);
+
+		// Add a directional light to the scene
+		const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+		directionalLight.position.set(0, 1, 1).normalize();
+		scene.add(directionalLight);
+
+        const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1);
+		directionalLight2.position.set(0, -1, -1).normalize();
+		scene.add(directionalLight2);
+
+		// // Create a cube with dimensions equal to the canvas height and width
+		// const geometry = new THREE.BoxGeometry(window.innerWidth, window.innerHeight, 0);
+        // // const geometry = new THREE.BoxGeometry(0.5, 0.5, 0);
+		// const material = new THREE.MeshStandardMaterial({
+		// 	color: 'red',
+		// 	metalness: 0.9
+		// });
+		// const cube = new THREE.Mesh(geometry, material);
+		// scene.add(cube);
+
+
+
+        // Create a 3D plane of HTML text in the center of the cube
+		// const textPlane = document.createElement('div');
+        const textPlane = document.getElementById('3DPlane')
+		// textPlane.classList.add('text-plane');
+		// textPlane.textContent = 'Hello, World!';
+		const textMesh = new THREE.CSS3DObject(textPlane);
+		textMesh.position.set(0, 0, 0);
+        // textMesh.setSize (window.innerWidth / 10, window.innerHeight - 100) 
+        // textMesh.scale.set( window.innerWidth, window.innerHeigh )
+        // textMesh.rotation.y += 0.125;
+		scene.add(textMesh);
+
+
+        // mouse stuff
+        // Set up the mouse position and plane rotation variables
+        const mousePos = new THREE.Vector2();
+        const planeQuaternion = new THREE.Quaternion();
+
+        // Listen for mouse movement events
+        window.addEventListener('mousemove', onMouseMove);
+
+        function onMouseMove(event) {
+            // Calculate the mouse position in normalized device coordinates
+            mousePos.x = (event.clientX / window.innerWidth) * 2 - 1;
+            mousePos.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+            // Calculate the rotation of the plane based on the mouse position
+            const targetQuaternion = new THREE.Quaternion();
+            targetQuaternion.setFromEuler(
+                new THREE.Euler(
+                mousePos.y * Math.PI / 50, // Pitch
+                // 0,
+                mousePos.x * Math.PI / 15, // Yaw
+                0 // Roll
+                )
+            );
+
+            // Interpolate the current rotation towards the target rotation
+            planeQuaternion.slerp(targetQuaternion, 0.1);
+
+            // Set the rotation of the plane
+            textMesh.rotation.setFromQuaternion(planeQuaternion);
+        }
+
+
+        // const geometry = new THREE.WireframeGeometry(new THREE.BoxGeometry(window.innerWidth / 2, window.innerHeight, 300));
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+		const material = new THREE.LineBasicMaterial({
+			color: 'red'
+		});
+		const cube = new THREE.LineSegments(geometry, material);
+		scene.add(cube);
+
+
+		// Position the camera and render the scene
+		camera.position.z = 630;
+		function animate() {
+			requestAnimationFrame(animate);
+			// cube.rotation.x += 0.01;
+			// cube.rotation.y += 0.01;
+            // textMesh.rotation.copy(camera.rotation);
+            // textMesh.rotation.y += 0.01;
+			renderer.render(scene, camera);
+		}
+		animate();
+
+        */
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+.landing_container {
+    background-color: #fff;
+    /* background-color: chartreuse; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.landing_container h1 {
+    font-size: 10vw;
+    margin: 0 0 0rem 0;
+    text-align: center;
+}
+
+.landing_container h3 {
+    font-size: 2vw;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.socials_container {
+    width: auto;
+    height: auto;
+    font-family: monospace;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 1.75vw;
+    /* padding: 2rem; */
+}
+
+.socials_container a {
+    margin: 1rem;
+    text-decoration: none;
+}
+
+/* PROJECT SECTION */
+.client_projects_container {
+    background-color: #fafafa;
+    /* background-color: lawngreen; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.client_projects_container h2 {
+    /* font-size: 5rem; */
+    font-size: 5vw;
+}
+
+.client_projects_container ul li {
+    list-style: none;
+    font-family: monospace;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 2.5vw;
+    margin-bottom: 6rem;
+    line-height: 0.90rem;
+}
+
+.client_projects_container ul li p {
+    list-style: none;
+    font-family: monospace;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    font-size: 1.5vw;
+    margin-left: -0.5rem;
+}
+
+.client_projects_container ul li a {
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    .landing_container h1 {
+        font-size: 8.5vw;
+        /* text-align: left; */
+    }
+    
+    .landing_container h3 {
+        font-size: 4vw;
+        margin-bottom: 3rem;
+        letter-spacing: 0.7rem;
+    }
+    
+    .socials_container {
+        width: auto;
+        height: auto;
+        font-family: monospace;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.25rem;
+        font-size: 3.90vw;
+        /* padding: 2rem; */
+    }
+    
+    .socials_container a {
+        margin: 1rem;
+        text-decoration: none;
+    }
+
+    .header_text {
+        letter-spacing: 0.9rem;
+    }
+    
+
+    .client_projects_container h2 {
+        /* font-size: 5rem; */
+        font-size: 4.5vw;
+        text-align: center;
+        letter-spacing: 0.7rem;
+    }
+    
+    .client_projects_container ul li {
+        letter-spacing: 0.25rem;
+        font-size: 3vw;
+        margin-bottom: 4rem;
+        line-height: 0.90rem;
+    }
+    
+    .client_projects_container ul li p {
+        list-style: none;
+        font-family: monospace;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        font-size: 3vw;
+        margin-left: -0.5rem;
+    }
+
+}
+
+@media screen and (max-width: 593px) {
+
+}
