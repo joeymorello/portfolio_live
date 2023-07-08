@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="./css/global.css">
     <link rel="stylesheet" href="./css/landing.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> -->
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r137/renderers/CSS3DRenderer.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/three@0.139.0/examples/js/renderers/CSS3DRenderer.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.139.0/examples/js/renderers/CSS3DRenderer.js"></script> -->
 
 
 	<style> 
@@ -41,7 +41,7 @@
 
     <div class="main_container" id="3DPlane">
             <div class="landing_container">
-                <h1 class="header_text">Joey Morello</h1>
+                <h1 class="header_text shadow-text">Joey Morello</h1>
                 <h3 class="header_text">Creative Technologist || Chicago</h3>
 
                 <div class="socials_container">
@@ -51,7 +51,7 @@
             </div>
 
             <div class="client_projects_container">
-                <h2 class="header_text">Client Projects</h2>
+                <h2 class="header_text shadow-text">Client Projects</h2>
                 <ul>
                     <li>
                         <p>3D</p>
@@ -85,6 +85,9 @@
                 </ul>
             </div>
     </div>
+
+    <canvas id="noise" class="noise"></canvas>
+    <script src="./js/noise.js"></script>
 
     <script>
         /*
