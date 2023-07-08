@@ -1,6 +1,5 @@
 .landing_container {
     background-color: #fff;
-    /* background-color: chartreuse; */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -31,7 +30,6 @@
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     font-size: 1.75vw;
-    /* padding: 2rem; */
 }
 
 .socials_container a {
@@ -42,7 +40,6 @@
 /* PROJECT SECTION */
 .client_projects_container {
     background-color: #fafafa;
-    /* background-color: lawngreen; */
     margin: 0;
     padding: 0;
     width: 100%;
@@ -54,7 +51,6 @@
 }
 
 .client_projects_container h2 {
-    /* font-size: 5rem; */
     font-size: 5vw;
 }
 
@@ -69,13 +65,14 @@
     line-height: 0.90rem;
 }
 
+/* project tag */
 .client_projects_container ul li p {
     list-style: none;
     font-family: monospace;
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.25rem;
-    font-size: 1.5vw;
+    font-size: 1vw;
     margin-left: -0.5rem;
 }
 
@@ -87,7 +84,6 @@
 @media screen and (max-width: 800px) {
     .landing_container h1 {
         font-size: 8.5vw;
-        /* text-align: left; */
     }
     
     .landing_container h3 {
@@ -104,7 +100,6 @@
         text-transform: uppercase;
         letter-spacing: 0.25rem;
         font-size: 3.90vw;
-        /* padding: 2rem; */
     }
     
     .socials_container a {
@@ -118,7 +113,6 @@
     
 
     .client_projects_container h2 {
-        /* font-size: 5rem; */
         font-size: 4.5vw;
         text-align: center;
         letter-spacing: 0.7rem;
@@ -137,12 +131,8 @@
         font-weight: 900;
         text-transform: uppercase;
         letter-spacing: 0.15rem;
-        font-size: 3vw;
+        font-size: 1.65vw;
         margin-left: -0.5rem;
     }
-
-}
-
-@media screen and (max-width: 593px) {
 
 }
