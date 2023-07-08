@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avondale AR Mural</title>
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="../../css/project_page.css">
+</head>
+<body>
+    <div class="main_container">
+
+        <div class="project_heading_container">
+            <h1>Avondale AR Mural</h1>
+        </div>
+
+        <div class="project_body_container">
+            <div class="project_body_container--inner">
+
+                <div class="overview_section">
+                    <div class="overview_section--left">
+                        <p>ROLE:<br />Lead Software Developer</p>
+                        <p>TOOLS:<br />8th Wall, Aframe, JavaScript, Blender</p>
+                        <br>
+                        <p>2023</p>
+                    </div>
+
+                    <div class="overview_section--right">
+                        <p>In collaboration with M1 Interactive, Ink Factory Studio and Protokulture, I built the augmented reality app for an interactive mural showcasing the history of the Avondale neighborhood in Chicago.</p>
+                    </div>
+                </div>
+
+                <video controls>
+                    <source src="../../assets/project_assets/avondale-ar-mural/videos/avondale-walkthrough.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+
+				<h2>3D Scan & AR Content Simulation</h2>
+
+				<img src="../../assets/project_assets/avondale-ar-mural/images/Avondale3-3dscan.png" >
+
+				<p>To get highly accurate tracking, I used 8th Wall's VPS (Virtual Positioning System). This allows you to 3D scan the location you want to track to create a 1 to 1 digital representation. This 3D mesh, along with GPS data, is then used to accuratly update the AR content position when running the app.</p>
+
+            </div>
+        </div>
+        <!-- <div class="home_btn">
+            <a href="../../index.html">
+                <img id="home_btn" src="../../assets/home_icons/home_001.png" >
+            </a>
+        </div> -->
+    </div>
+
+    <canvas id="noise" class="noise"></canvas>
+    <script src="../../js/noise.js"></script>
+</body>
+<script src="../../js/projectPage.js"></script>
+</html>
