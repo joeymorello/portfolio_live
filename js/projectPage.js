@@ -1,3 +1,4 @@
+/*
 const homeButton = document.getElementById('home_btn')
 let homeButtonInterval
 const min = 1
@@ -20,4 +21,5 @@ homeButton.addEventListener("mouseover", function (event) {
 
 homeButton.addEventListener("mouseleave", function (event) {
 	clearInterval(homeButtonInterval)
-}, false);
+}, false); 
+*/
