@@ -64,12 +64,20 @@
     font-size: 2.5vw;
     margin-bottom: 6rem;
     line-height: 0.90rem;
-    -webkit-transition: all 0.25s cubic-bezier(.42, 0, .58, 1);
-    transition: all 0.25s cubic-bezier(.42, 0, .58, 1);
+    /* -webkit-transition: all 0.25s cubic-bezier(.42, 0, .58, 1);
+    transition: all 0.25s cubic-bezier(.42, 0, .58, 1); */
+}
+
+.client_projects_container ul div {
+    height: 50vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .client_projects_container ul li:hover {
-    letter-spacing: 0.125rem;
+    /* letter-spacing: 0.125rem; */
 }
 
 /* project tag */
@@ -80,7 +88,26 @@
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     font-size: 1vw;
-    margin-left: -0.5rem;
+    /* margin-top: -2.75rem;
+    margin-left: -1.5rem; */
+    mix-blend-mode: difference;
+    margin-top: 0; 
+    margin-bottom: 1.5rem; 
+    margin-left: -1rem; 
+    margin-right: 0; 
+    padding: 0;
+}
+
+.client_projects_container ul li h3 {
+    text-decoration: none;
+    mix-blend-mode: difference;
+    margin-top: 0; 
+    margin-bottom: -0.25rem; 
+    margin-left: -1.25rem; 
+    margin-right: 0; 
+    padding: 0;
+    /* margin-top: -1rem;
+    margin-left: -1rem; */
 }
 
 .client_projects_container ul li a {
