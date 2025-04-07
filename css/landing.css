@@ -56,6 +56,10 @@
     font-size: 5vw;
 }
 
+.client_projects_container ul {
+    padding: 0;
+}
+
 .client_projects_container ul li {
     list-style: none;
     font-family: monospace;
@@ -65,21 +69,15 @@
     font-size: 2.5vw;
     margin-bottom: 6rem;
     line-height: 0.90rem;
-    /* -webkit-transition: all 0.25s cubic-bezier(.42, 0, .58, 1);
-    transition: all 0.25s cubic-bezier(.42, 0, .58, 1); */
 }
 
 .client_projects_container ul div {
     height: 60vh;
-    /* max-width: 100vw; */
+    max-width: 100vw;
 
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.client_projects_container ul li:hover {
-    /* letter-spacing: 0.125rem; */
 }
 
 /* project tag */
@@ -90,8 +88,6 @@
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     font-size: 1vw;
-    /* margin-top: -2.75rem;
-    margin-left: -1.5rem; */
     mix-blend-mode: difference;
     margin-top: 0; 
     margin-bottom: 1.5rem; 
@@ -108,14 +104,11 @@
     margin-left: -1.25rem; 
     margin-right: 0; 
     padding: 0;
-    /* margin-top: -1rem;
-    margin-left: -1rem; */
 }
 
 .client_projects_container ul li a {
     text-decoration: none;
 }
-
 
 @media screen and (max-width: 800px) {
     .landing_container h1 {
@@ -168,7 +161,15 @@
         text-transform: uppercase;
         letter-spacing: 0.15rem;
         font-size: 1.65vw;
-        margin-left: -0.5rem;
+        /* margin-left: -0.5rem; */
+    }
+
+    .client_projects_container ul li a h3 {
+        margin-left: 0;
+    }
+
+    .client_projects_container ul div {
+        height: 30vh;
     }
 
 }
